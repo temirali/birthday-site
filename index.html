@@ -9,53 +9,31 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #ffe4e1;
             margin: 0;
-            padding: 10px;
+            padding: 0;
+        
+            background-color: #000;
+            background-image: url("test_image.jpeg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: auto 100%;
         }
-
+        
         .container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             padding: 10px;
         }
-
+        
         .card {
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.92);
             padding: 20px;
-            margin: 20px auto;
             width: 90%;
             max-width: 500px;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            color: #d63384;
-            font-size: 28px;
-        }
-
-        h2 {
-            color: #333;
-            font-size: 20px;
-        }
-
-        p {
-            font-size: 16px;
-            line-height: 1.5;
-        }
-
-        @media (min-width: 768px) {
-            h1 {
-                font-size: 36px;
-            }
-
-            h2 {
-                font-size: 24px;
-            }
-
-            p {
-                font-size: 18px;
-            }
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
     </style>
 </head>
