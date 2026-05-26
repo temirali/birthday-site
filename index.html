@@ -1,23 +1,388 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <title>Birthday Invitation</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Амир & Николь</title>
+  <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <style>
-        body {
-            margin: 0;
+    body {
+      font-family: Arial, sans-serif;
+    }
 
-            background-color: #000;
-            background-image: url("test_image2.jpeg");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
-    </style>
+    .section {
+      padding: 20px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
+
+    .section:not(.last-section) {
+      margin-bottom: 20px;
+    }
+
+    .hero {
+      margin-bottom: 50px !important;
+      color: white;
+      background: url("images/bg-image.png") center/contain no-repeat;
+      height: 100vh;
+    }
+
+    .hero-content {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1;
+    }
+
+    .name, .subtitle {
+      font-family: "Anastasia Script", cursive;
+      font-size: 2.5rem;
+      font-weight: 400;
+    }
+
+    .date {
+      font-family: "Forum", serif;
+      font-size: 6rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+    }
+
+    h2 {
+      color: #424C14;
+      font-family: "Anastasia Script", cursive;
+      font-weight: 300;
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #424C14;
+      font-family: "Forum", serif;
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 10px auto;
+      line-height: 1.6;
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+    span {
+      color: #424C14;
+      font-family: "Forum", serif;
+    }
+
+    /* schedule */
+    .schedule {
+      padding-left: 60px;
+      max-width: 500px;
+      width: 100%;
+      display: inline-block;
+    }
+
+    .schedule-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 18px;
+    }
+
+    .icon {
+    width: 100%;
+    max-width: 80px;
+    height: auto;
+    flex-shrink: 0;
+    }
+
+    .content {
+    text-align: left;
+    max-width: 200px;
+    width: 100%;
+    font-size: 1.4rem;
+    }
+
+    .time {
+    display: block;
+    font-weight: light;
+    margin-bottom: 5px;
+    }
+
+    .event {
+    display: block;
+    }
+
+    /* images */
+    .arc-image {
+      max-width: 450px;
+      width: 100%;
+      height: auto;
+      margin: 30px auto 0 auto;
+    }
+
+    .together-image {
+      max-width: 800px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto 40px auto;
+    }
+
+    /* svgs */
+    .ornament {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+    }
+
+    .svg {
+        margin-bottom: 40px;
+    }
+
+    .simple {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .calendar {
+      margin-top: 30px;
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+    }
+
+    /* color row */
+    .colors {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 30px 0 0 0;
+      flex-wrap: wrap;
+    }
+
+    .color {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+
+    @font-face {
+      font-family: "Anastasia Script";
+      src: url("fonts/AnastasiaScript.ttf") format("truetype");
+    }
+
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 2.4rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+
+      .date {
+        font-size: 4rem;
+      }
+
+      .name, .subtitle {
+        font-size: 2rem;
+      }
+
+      .ornament {
+        max-width: 200px;
+      }
+
+      .content {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <!-- SECTION 1 -->
+  <section class="section hero">
+    <div class="hero-content">
+      <div class="name">Amir & Nichole</div>
+      <div class="date">15<br>AUGUST<br>2026</div>
+      <div class="subtitle">Our wedding day</div>
+    </div>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section class="section">
+    <div class="svg">
+        <img class="ornament" src="images/ornament1.svg" alt="icon">
+    </div>
+
+    <h2>Дорогие гости!</h2>
+    <p>
+      Один день в этом году станет для нас особенным, и мы хотим провести его
+      в кругу близких и друзей! С большим удовольствием приглашаем Вас на нашу свадьбу!
+    </p>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section class="section">
+    <div class="svg">
+        <img class="ornament" src="images/ornament1.svg" alt="icon">
+    </div>
+
+    <h2>Дорогие гости!</h2>
+    <p>
+      Один день в этом году станет для нас особенным, и мы хотим провести его
+      в кругу близких и друзей! С большим удовольствием приглашаем Вас на нашу свадьбу!
+    </p>
+
+    <img class="calendar" src="images/calendar.svg" alt="icon">
+  </section>
+
+  <!-- SECTION 4 -->
+  <section class="section">
+    <div class="svg">
+        <img class="ornament" src="images/ornament1.svg" alt="icon">
+    </div>
+
+    <h2>Программа дня</h2>
+    <div class="schedule">
+
+    <div class="schedule-item">
+        <div class="icon">
+            <img class="icon1" src="images/icon1.svg" alt="icon">
+        </div>
+
+        <div class="content">
+        <span class="time">16:00</span>
+        <span class="event">Сбор гостей</span>
+        </div>
+    </div>
+
+    <div class="schedule-item">
+        <div class="icon">
+            <img class="icon2" src="images/icon2.svg" alt="icon">
+        </div>
+
+        <div class="content">
+        <span class="time">17:00</span>
+        <span class="event">Начало свадебного банкета</span>
+        </div>
+    </div>
+
+    <div class="schedule-item">
+        <div class="icon">
+            <img class="icon3" src="images/icon3.svg" alt="icon">
+        </div>
+
+        <div class="content">
+        <span class="time">22:00</span>
+        <span class="event">Торт</span>
+        </div>
+    </div>
+
+    <div class="schedule-item">
+        <div class="icon">
+            <img class="icon4" src="images/icon4.svg" alt="icon">
+        </div>
+
+        <div class="content">
+        <span class="time">00:00</span>
+        <span class="event">Завершение вечера</span>
+        </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5 -->
+  <section class="section">
+    <div class="svg">
+        <img class="ornament" src="images/ornament1.svg" alt="icon">
+    </div>
+    <h2>Локация</h2>
+    <p>Наша свадьба пройдет в живописном месте «Эко-комплекс Лель»</p>
+    <p>Адрес: г. Уфа, ул. Левобережная, 51</p>
+
+    <img src="images/arc.png" class="arc-image" alt="Локация">
+  </section>
+
+  <!-- SECTION 6 -->
+  <section class="section">
+    <div class="svg">
+        <img class="ornament" src="images/ornament1.svg" alt="icon">
+    </div>
+
+    <h2>Пожелания</h2>
+    <p>
+      Ваши улыбки и смех подарят нам незабываемое счастье в этот день,
+      а пожелания в конвертах помогут осуществить наши мечты!
+    </p>
+
+    <div class="svg simple">
+        <img class="ornament" src="images/ornament2.svg" alt="icon">
+    </div>
+
+    <p>
+      Приятным комплиментом для нас вместо цветов будет бутылочка вашего любимого вина,
+      которую мы откроем на ближайшем совместном празднике.
+    </p>
+
+    <div class="svg simple">
+        <img class="ornament" src="images/ornament2.svg" alt="icon">
+    </div>
+
+    <p>
+      Будем благодарны, если вы воздержитесь от криков «Горько»,
+      ведь поцелуй — это знак чувств, а не по заказу.
+    </p>
+  </section>
+
+  <!-- SECTION 7 -->
+  <section class="section">
+    <div class="svg">
+        <img class="ornament" src="images/ornament1.svg" alt="icon">
+    </div>
+
+    <h2>Дресс-код</h2>
+    <p>
+      Для нас главное — ваше присутствие и хорошее настроение!
+      Но мы будем рады, если вы поддержите цветовую гамму свадьбы.
+    </p>
+
+    <div class="colors">
+      <div class="color" style="background:#8E8E60"></div>
+      <div class="color" style="background:#495418"></div>
+      <div class="color" style="background:#473525"></div>
+      <div class="color" style="background:#947960"></div>
+      <div class="color" style="background:#C9B39E"></div>
+      <div class="color" style="background:#DEBDC0"></div>
+    </div>
+  </section>
+
+  <!-- SECTION 8 -->
+  <section class="section last-section">
+    <div class="svg">
+        <img class="ornament" src="images/ornament1.svg" alt="icon">
+    </div>
+
+    <img src="images/together.png" class="together-image" alt="Фото">
+
+    <p>
+      Мы будем счастливы видеть вас!<br>
+      С любовью, Амир и Николь
+    </p>
+  </section>
+
 </body>
 </html>
